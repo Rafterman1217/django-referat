@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Starte Entwicklungsserver",
+      "type": "shell",
+      "command": "cd djangoApp/; python3 manage.py runserver"
+    },
+    {
+      "label": "Migriere Entwicklungsserver",
+      "type": "shell",
+      "command": "cd djangoApp/; python3 manage.py migrate"
+    },
+    {
+      "label": "Erstelle Migrationen",
+      "type": "shell",
+      "command": "cd djangoApp/; python3 manage.py makemigrations"
+    },
+    {
+      "label": "Installiere Abhängigkeiten",
+      "type": "shell",
+      "command": "python3 -m pip install -r ./requirements.txt"
+    },
+    {
+      "label": "Erstinstallation",
+      "dependsOn": ["Installiere Abhängigkeiten","Erstelle Migrationen", "Migriere Entwicklungsserver"]
+    }
+  ]
+}
+

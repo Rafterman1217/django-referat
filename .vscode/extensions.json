@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "donjayamanne.python-extension-pack",
+        "batisteo.vscode-django"
+    ]
+}
