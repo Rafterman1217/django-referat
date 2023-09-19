@@ -23,6 +23,7 @@
     },
     {
       "label": "Erstinstallation",
+      "dependsOrder": "sequence",
       "dependsOn": ["Installiere Abhängigkeiten","Erstelle Migrationen", "Migriere Entwicklungsserver"]
     }
   ]

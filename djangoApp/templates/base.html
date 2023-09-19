@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       {% block title %}
-        Meine Website
+        Django Referat
       {% endblock %}
     </title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
@@ -17,7 +17,13 @@
       <nav>
         <ul>
           <li>
-            <a href="/upload/">Bild hochladen</a>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/tasks/">Die Aufgaben</a>
+          </li>
+          <li>
+            <a href="/pictures/upload/">Bild hochladen</a>
           </li>
           <li>
             <a href="/pictures/">Alle Bilder</a>
