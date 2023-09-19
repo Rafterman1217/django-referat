@@ -22,7 +22,7 @@
 	 "forwardPorts": [8000],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "python3 -m pip install -r ./requirements.txt; cd djangoApp; python3 manage.py makemigrations; python3 manage.py migrate"
+	"postCreateCommand": "./.devcontainer/postCreateCommand.sh"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
