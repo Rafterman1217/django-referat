@@ -7,15 +7,14 @@
 ## [Start me up](https://www.youtube.com/watch?v=SGyOaCXr8Lw)
 #### 1. Falls du Vs Code benutzt und auf deinem System eine Docker Engine läuft.
 
-  - Öffne den DevContainer
-
-  - Starte den Entwicklungsserver 
+- Öffne das Projekt als Devcontainer
+- Starte den Entwicklungsserver 
 
         cd djangoApp/
         python3 manage.py runserver
 
 
-  - Du solltest nun unter 127.0.0.1:8000 den Entwicklungsserver erreichen können
+- Du solltest nun unter 127.0.0.1:8000 den Entwicklungsserver erreichen können
 
 ---
 #### 2. Falls du lokal arbeitest und VsCode nutzt.
@@ -61,4 +60,10 @@
 
 - Du solltest nun unter 127.0.0.1:8000 den Entwicklungsserver erreichen können        
 
+
+### Anlagen zu diesem Abschnitt
+
+[Der Entwicklungsserver](https://docs.djangoproject.com/en/4.2/intro/tutorial01/#the-development-server)
+[Datenbanken installieren](https://docs.djangoproject.com/en/4.2/intro/tutorial01/#the-development-server)
+    
 ---
