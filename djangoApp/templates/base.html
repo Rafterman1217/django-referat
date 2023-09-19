@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% block title %}
+        Meine Website
+      {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+  <body>
+    <header>
+      <h1>Django Referat</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="/upload/">Bild hochladen</a>
+          </li>
+          <li>
+            <a href="/pictures/">Alle Bilder</a>
+          </li>
+          <li>
+            <a href="/pictures/valid/">Aktuelle Bilder</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="content">
+      {% block content %}
+
+      {% endblock %}
+    </div>
+
+    <footer>
+      <p></p>
+    </footer>
+  </body>
+</html>

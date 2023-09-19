@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block content %}
+  <h2>Bild hochladen</h2>
+
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %} {{ form.picture.label_tag }} {{ form.picture }}
+
+    <input type="datetime-local" id="id_show_until" name="show_until" step="1" />
+    {{ form.show_until.errors }}
+
+    <button type="submit">Bild hochladen</button>
+  </form>
+{% endblock %}
