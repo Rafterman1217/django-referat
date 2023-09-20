@@ -2,6 +2,7 @@ from ninja import Schema
 from datetime import datetime
 
 class ContentSchema(Schema):
+    id: int
     created_at: datetime
     show_until: datetime
     show_since: datetime
