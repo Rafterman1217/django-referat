@@ -17,6 +17,7 @@
     {% for picture in pictures %}
       <div>
         <img src="{{ picture.picture.url }}" alt="Bild" />
+        <p>Zeigen ab: {{ picture.show_since }}</p>
         <p>Zeigen bis: {{ picture.show_until }}</p>
       </div>
     {% endfor %}
