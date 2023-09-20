@@ -21,6 +21,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from content.views import CombinedContentView
+from djangoApp.api import api
 from .views import HomeView,TaskView
 
 urlpatterns = [
@@ -30,6 +31,7 @@ urlpatterns = [
     path('texts/', include('text.urls')),
     path('tasks/', TaskView.as_view(), name='tasks'),
     path('frontend/', CombinedContentView.as_view(), name='combined_content_view'),
+    path("api/", api.urls),
 ]
 
 
