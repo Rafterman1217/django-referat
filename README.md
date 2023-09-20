@@ -67,3 +67,17 @@
 [Datenbanken installieren](https://docs.djangoproject.com/en/4.2/intro/tutorial01/#the-development-server)
     
 ---
+#### 4. Falls du einen DevContainer benutzen möchtest aber kein VsCode nutzt.
+
+- Öffne das Projekt als Devcontainer
+
+- Führe das PostCreateCommand aus
+
+        sh ./.devcontainer/postCreateCommand.sh
+
+- Starte den Entwicklungsserver 
+
+        python3 manage.py runserver
+
+- Du solltest nun unter 127.0.0.1:8000 den Entwicklungsserver erreichen können        
+---
