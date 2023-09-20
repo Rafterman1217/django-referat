@@ -79,5 +79,6 @@
 
         python3 manage.py runserver
 
+- Außerdem solltest du den Port 8000 deines Containers nach außen öffnen
 - Du solltest nun unter 127.0.0.1:8000 den Entwicklungsserver erreichen können        
 ---

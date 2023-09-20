@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% block content %}
+  <h2>Text hochladen</h2>
+
+  <form method="post" >
+    {% csrf_token %} {{ form.text.label_tag }} {{ form.text }}
+
+    <label for="id_show_since">Zeige ab:</label>
+    <input type="datetime-local" id="id_show_since" name="show_since" step="1" />
+    {{ form.show_since.errors }}
+   
+   
+    <label for="id_show_until">Zeige bis:</label>
+    <input type="datetime-local" id="id_show_until" name="show_until" step="1" />
+    {{ form.show_until.errors }}
+
+
+
+    <button type="submit">Text hochladen</button>
+  </form>
+{% endblock %}

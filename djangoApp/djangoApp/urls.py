@@ -19,13 +19,17 @@ from django.urls import include, path
 
 from django.conf import settings
 from django.conf.urls.static import static
+
+from content.views import CombinedContentView
 from .views import HomeView,TaskView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', HomeView.as_view(), name='home'),
     path('pictures/', include('picture.urls')),
+    path('texts/', include('text.urls')),
     path('tasks/', TaskView.as_view(), name='tasks'),
+    path('frontend/', CombinedContentView.as_view(), name='combined_content_view'),
 ]
 
 

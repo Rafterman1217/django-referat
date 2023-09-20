@@ -1,0 +1,39 @@
+{% extends 'base_frontend.html' %}
+
+{% block content %}
+  <style>
+    .content-container {
+      text-align: center;
+    }
+    
+    .image {
+      display: inline-block;
+
+    }
+    .text {
+      display: inline-block;
+      padding: 2rem;
+      background-color:#5d9363;
+      border-radius:12px;
+    }
+    .content-block{
+      margin-top: 2rem;
+    }
+
+  </style>
+  <div class="content-container">
+    {% if combined_content_list %}
+      {% for content in combined_content_list %}
+      <div class="content-block">
+      {% if content.content_type == 'picture' %}
+          <img class="image" src="{{ content.picture.url }}" alt="Bild" />
+        {% elif content.content_type == 'text' %}
+          <p class="text">{{ content.text }}</p>
+        {% endif %}
+      </div>
+      {% endfor %}
+    {% else %}
+      <p>Oh nein, es gibt keine Inhalte</p>
+    {% endif %}
+  </div>
+{% endblock %}

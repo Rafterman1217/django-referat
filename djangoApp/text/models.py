@@ -3,8 +3,8 @@ from django.db import models
 from content.models import Content
 
 # Create your models here.
-class Picture(Content):
+class Text(Content):
 
-    picture = models.ImageField(upload_to='images/')
+    text = models.TextField(max_length=2000)
 
     

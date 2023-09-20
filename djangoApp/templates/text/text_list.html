@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <style>
+    .text-container {
+      text-align: center;
+    }
+    
+    .text {
+      display: inline-block;
+      margin: 10px; 
+      padding: 2rem;
+      background-color:#5d9363;
+      border-radius:12px;
+    }
+  </style>
+  <h2>Alle Texte</h2>
+  <div class="text-container">
+    {% if texts %}
+    {% for text in texts %}
+      <div>
+        <p class="text">{{text.text}}<p>
+        <p>Zeigen ab: {{ text.show_since }}</p>
+        <p>Zeigen bis: {{ text.show_until }}</p>
+      </div>
+    {% endfor %}
+    {% else %}
+    <p>Oh nein, es gibt keine Texte</p>
+  {% endif %}
+  </div>
+{% endblock %}
