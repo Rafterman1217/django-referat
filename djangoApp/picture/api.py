@@ -1,5 +1,5 @@
 from typing import List
-from ninja import Router, Schema
+from ninja import Router
 
 from content.schema import UpdateContentRequest
 
@@ -25,8 +25,6 @@ def create_picture(request, data: PictureSchema):
 @router.put("/pictures/{id}/", response=PictureSchema)
 def update_picture(request, id: int, data: UpdateContentRequest):
     picture = Picture.objects.get(id=id)
-    
-    # Update nur die Felder, die im Request angegeben sind
     for attr, value in data.dict().items():
         if value is not None:
             setattr(picture, attr, value)
