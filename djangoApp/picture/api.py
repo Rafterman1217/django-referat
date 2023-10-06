@@ -10,19 +10,19 @@ router = Router()
 
 
 
-@router.get("/pictures/", response=List[PictureSchema])
+@router.get("/", response=List[PictureSchema])
 def list_pictures(request):
     return Picture.objects.all()
 
-@router.get("/pictures/{id}/", response=PictureSchema)
+@router.get("/{id}/", response=PictureSchema)
 def get_picture(request, id: int):
     return Picture.objects.get(id=id)
 
-@router.post("/pictures/", response=PictureSchema)
+@router.post("/", response=PictureSchema)
 def create_picture(request, data: PictureSchema):
     return Picture.objects.create(**data.dict())
 
-@router.put("/pictures/{id}/", response=PictureSchema)
+@router.put("/{id}/", response=PictureSchema)
 def update_picture(request, id: int, data: UpdateContentRequest):
     picture = Picture.objects.get(id=id)
     for attr, value in data.dict().items():
@@ -32,7 +32,7 @@ def update_picture(request, id: int, data: UpdateContentRequest):
     picture.save()
     return picture
 
-@router.delete("/pictures/{id}/")
+@router.delete("/{id}/")
 def delete_picture(request, id: int):
     Picture.objects.get(id=id).delete()
     return {"success": True}
