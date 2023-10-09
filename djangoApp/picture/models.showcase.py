@@ -17,8 +17,7 @@ class Bestellung(models.Model):
     produkt = models.ForeignKey(Produkt,on_delete=models.CASCADE)
     kunde = models.ForeignKey(Kunde,on_delete=models.CASCADE)
     
-    
-    
+
 
     
     
