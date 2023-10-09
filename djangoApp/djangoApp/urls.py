@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-
+from django.contrib.auth.views import LoginView, LogoutView
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -32,6 +32,8 @@ urlpatterns = [
     path('tasks/', TaskView.as_view(), name='tasks'),
     path('frontend/', CombinedContentView.as_view(), name='combined_content_view'),
     path("api/", api.urls),
+    path('login/', LoginView.as_view(), name='login'),
+    path('logout/', LogoutView.as_view(), name='logout'),
 ]
 
 
