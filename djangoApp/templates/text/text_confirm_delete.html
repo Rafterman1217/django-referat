@@ -1,0 +1,9 @@
+{% extends 'base.html' %} {% block content %}
+  <h1>Text löschen</h1>
+  <p>Möchtest du das Text "{{ object }}" wirklich löschen?</p>
+
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit" >Löschen</a>
+  </form>
+{% endblock %}

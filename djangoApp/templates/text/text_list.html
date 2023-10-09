@@ -25,6 +25,7 @@
         <p>Zeigen ab: {{ text.show_since }}</p>
         <p>Zeigen bis: {{ text.show_until }}</p>
         <a class="button" href="{% url 'text_edit' pk=text.pk %}">Bearbeiten</a>
+        <a class="button" href="{% url 'text_delete' pk=text.pk %}">Löschen</a>
       </div>
     {% endfor %}
     {% else %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+  <h1>Bild bearbeiten</h1>
+  <form method="post">
+    {% csrf_token %}
+    <label for="id_show_since">Zeige ab:</label>
+    <input type="datetime-local" id="id_show_since" name="show_since" step="1" value="{{ form.show_since.value|date:'Y-m-d\TH:i' }}" />
+    {{ form.show_since.errors }}
+   
+    <label for="id_show_until">Zeige bis:</label>
+    <input type="datetime-local" id="id_show_until" name="show_until" step="1" value="{{ form.show_until.value|date:'Y-m-d\TH:i' }}" />
+    {{ form.show_until.errors }}
+    <button type="submit">Speichern</button>
+  </form>
+{% endblock %}
