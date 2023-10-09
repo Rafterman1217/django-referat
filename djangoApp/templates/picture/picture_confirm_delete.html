@@ -1,0 +1,9 @@
+{% extends 'base.html' %} {% block content %}
+  <h1>Bild löschen</h1>
+  <p>Möchtest du das Bild "{{ object }}" wirklich löschen?</p>
+
+  <form method="post">
+    {% csrf_token %}
+    <input type="submit" value="Löschen" />
+  </form>
+{% endblock %}
