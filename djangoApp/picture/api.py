@@ -19,12 +19,12 @@ def get_picture(request, id: int):
     return Picture.objects.get(id=id)
 
 
-@router.post("/", response=PictureRequestSchema)
+@router.post("/", response=PictureResponseSchema)
 def create_picture(request, data: PictureRequestSchema):
     return Picture.objects.create(**data.dict())
 
 
-@router.put("/{id}/", response=PictureRequestSchema)
+@router.put("/{id}/", response=PictureResponseSchema)
 def update_picture(request, id: int, data: UpdateContentRequest):
     picture = Picture.objects.get(id=id)
     for attr, value in data.dict().items():

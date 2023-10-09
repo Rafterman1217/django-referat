@@ -20,7 +20,7 @@ def get_text(request, id: int):
     return Text.objects.get(id=id)
 
 
-@router.post("/", response=TextRequestSchema)
+@router.post("/", response=TextResponseSchema)
 def create_text(request, data: TextRequestSchema):
     return Text.objects.create(**data.dict())
 
