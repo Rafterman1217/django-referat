@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+
+
   <h1>Text bearbeiten</h1>
   <form method="post">
     {% csrf_token %}
@@ -11,6 +14,6 @@
     <label for="id_show_until">Zeige bis:</label>
     <input type="datetime-local" id="id_show_until" name="show_until" step="1" value="{{ form.show_until.value|date:'Y-m-d\TH:i' }}" />
     {{ form.show_until.errors }}
-    <input type="submit" value="Speichern">
+    <button type="submit">Speichern</button>
   </form>
 {% endblock %}

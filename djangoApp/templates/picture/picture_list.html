@@ -15,11 +15,11 @@
   <div class="picture-container">
     {% if pictures %}
     {% for picture in pictures %}
-      <div>
+      <div class="content-block">
         <img src="{{ picture.picture.url }}" alt="Bild" />
         <p>Zeigen ab: {{ picture.show_since }}</p>
         <p>Zeigen bis: {{ picture.show_until }}</p>
-        <a href="{% url 'picture_delete' pk=picture.pk %}">Löschen</a>
+        <a class="button" href="{% url 'picture_delete' pk=picture.pk %}">Löschen</a>
       </div>
     {% endfor %}
     {% else %}

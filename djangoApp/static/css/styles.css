@@ -29,6 +29,10 @@ nav ul li a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
+    transition: all 0.3s ease;
+}
+nav ul li a:hover {
+    color: #5d9363;
 }
 footer a{
     text-decoration: none;
@@ -39,6 +43,10 @@ a{
     text-decoration: none;
     color: #000;
     font-weight: bold;
+    transition: all 0.3s ease;
+}
+a:hover{
+    color: #5d9363;
 }
 .content {
     max-width: 1200px;
@@ -68,6 +76,18 @@ form input, form select {
     border-radius: 4px;
     margin-bottom: 10px;
 }
+.button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #555;
+}
 
 form button {
     padding: 10px 20px;
@@ -86,12 +106,20 @@ footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
     position: fixed;
     width: 100%;
     bottom: 0;
 }
 
 img{
-    max-width: 1200px;
+    max-width: 900px;
+}
+
+
+.content-block{
+    border-radius: 12px;
+    border:#aaaaaa 1px solid;
+    padding: 2rem;
+    margin: 1rem;
+    background-color: #e2e2e2;
 }

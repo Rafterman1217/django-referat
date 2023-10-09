@@ -13,16 +13,18 @@
       background-color:#5d9363;
       border-radius:12px;
     }
+
+
   </style>
   <h2>Alle Texte</h2>
   <div class="text-container">
     {% if texts %}
     {% for text in texts %}
-      <div>
-        <p class="text">{{text.text}}<p>
+      <div class="content-block">
+        <p class="text">{{text.text}}</p>
         <p>Zeigen ab: {{ text.show_since }}</p>
         <p>Zeigen bis: {{ text.show_until }}</p>
-        <a href="{% url 'text_edit' pk=text.pk %}">Bearbeiten</a>
+        <a class="button" href="{% url 'text_edit' pk=text.pk %}">Bearbeiten</a>
       </div>
     {% endfor %}
     {% else %}
