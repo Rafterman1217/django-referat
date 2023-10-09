@@ -1,8 +1,14 @@
 from datetime import datetime
 from ninja import Schema
 
-from content.schema import ContentSchema
+from content.schema import ContentRequestSchema,ContentResponseSchema
 
 
-class TextSchema(ContentSchema):
+
+class TextRequestSchema(ContentRequestSchema):
+    text: str
+    
+    
+
+class TextResponseSchema(ContentResponseSchema):
     text: str
